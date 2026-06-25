@@ -166,6 +166,29 @@ section:nth-child(even) {
     margin: 0 auto 1rem;
 }
 
+.social-links {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.social-links a {
+    display: inline-block;
+    padding: 8px 12px;
+    background: var(--accent);
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: background 0.3s ease;
+}
+
+.social-links a:hover {
+    background: var(--primary);
+}
+
 /* Publications */
 
 .pub-list {
@@ -341,18 +364,30 @@ footer {
                 <div class="avatar"></div>
                 <h3>Prof. Your Name</h3>
                 <p>Principal Investigator</p>
+                <div class="social-links">
+                    <a href="https://linkedin.com/in/yourprofile" target="_blank">LinkedIn</a>
+                    <a href="https://yourwebsite.com" target="_blank">Website</a>
+                </div>
             </div>
 
             <div class="card">
                 <div class="avatar"></div>
                 <h3>Graduate Student</h3>
                 <p>PhD Student</p>
+                <div class="social-links">
+                    <a href="https://linkedin.com/in/student1" target="_blank">LinkedIn</a>
+                    <a href="https://student1.com" target="_blank">Website</a>
+                </div>
             </div>
 
             <div class="card">
                 <div class="avatar"></div>
                 <h3>Graduate Student</h3>
                 <p>PhD Student</p>
+                <div class="social-links">
+                    <a href="https://linkedin.com/in/student2" target="_blank">LinkedIn</a>
+                    <a href="https://student2.com" target="_blank">Website</a>
+                </div>
             </div>
 
         </div>
