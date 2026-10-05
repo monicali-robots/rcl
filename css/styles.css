@@ -168,7 +168,9 @@ section p {
 /* Social Links / Team Member Buttons */
 .social-links {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
     gap: 10px;
     margin-top: 15px;
 }
@@ -187,6 +189,7 @@ section p {
 
 .social-links a:hover {
     background: var(--accent);
+    color: var(--dark);
 }
 
 /* Publications List */
@@ -239,5 +242,9 @@ footer {
 
     .team-grid {
         grid-template-columns: 1fr;
+    }
+
+    .social-links {
+        flex-direction: row;
     }
 }
