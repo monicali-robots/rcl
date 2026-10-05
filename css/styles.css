@@ -165,6 +165,15 @@ section p {
     margin-bottom: 10px;
 }
 
+.avatar-image {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 0 auto 15px;
+    display: block;
+}
+
 /* Social Links / Team Member Buttons */
 .social-links {
     display: flex;
