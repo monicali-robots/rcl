@@ -39,44 +39,19 @@
     </div>
 </section>
 
-<!-- About Section -->
-<div id="about-section"></div>
+{% include_relative _includes/about.html %}
 
-<!-- News Section -->
-<div id="news-section"></div>
+{% include_relative _includes/news.html %}
 
-<!-- Team Section -->
-<div id="team-section"></div>
+{% include_relative _includes/team.html %}
 
-<!-- Publications Section -->
-<div id="publications-section"></div>
+{% include_relative _includes/publications.html %}
 
-<!-- Contact Section -->
-<div id="contact-section"></div>
+{% include_relative _includes/contact.html %}
 
 <footer>
     © 2026 Robot Contact Lab • University of Washington
 </footer>
-
-<script>
-    // Load section files
-    async function loadSection(sectionId, filePath) {
-        try {
-            const response = await fetch(filePath);
-            const html = await response.text();
-            document.getElementById(sectionId).innerHTML = html;
-        } catch (error) {
-            console.error(`Error loading ${filePath}:`, error);
-        }
-    }
-
-    // Load all sections
-    loadSection('about-section', 'sections/about.html');
-    loadSection('news-section', 'sections/news.html');
-    loadSection('team-section', 'sections/team.html');
-    loadSection('publications-section', 'sections/publications.html');
-    loadSection('contact-section', 'sections/contact.html');
-</script>
 
 </body>
 </html>

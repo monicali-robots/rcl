@@ -1,0 +1,14 @@
+# Jekyll configuration for Robot Contact Lab website
+title: Robot Contact Lab
+description: Contact Robotics Research at University of Washington
+baseurl: ""
+url: "https://monicali-robots.github.io/rcl"
+
+# Build settings
+markdown: kramdown
+theme: minima
+
+# Exclude from processing
+exclude:
+  - .gitignore
+  - README.md
