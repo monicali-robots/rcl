@@ -1,15 +1,10 @@
----
-layout: default
-title: Robot Contact Lab
----
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Robot Contact Lab</title>
-<link rel="stylesheet" href="{{ '/css/styles.css' | relative_url }}">
+<link rel="stylesheet" href="css/styles.css">
 </head>
 
 <body>
@@ -44,19 +39,35 @@ title: Robot Contact Lab
     </div>
 </section>
 
-{% include_relative _includes/about.html %}
-
-{% include_relative _includes/news.html %}
-
-{% include_relative _includes/team.html %}
-
-{% include_relative _includes/publications.html %}
-
-{% include_relative _includes/contact.html %}
+<div id="about-section"></div>
+<div id="news-section"></div>
+<div id="team-section"></div>
+<div id="publications-section"></div>
+<div id="contact-section"></div>
 
 <footer>
     © 2026 Robot Contact Lab • University of Washington
 </footer>
+
+<script>
+async function loadSection(targetId, filePath) {
+  try {
+    const response = await fetch(filePath);
+    if (!response.ok) throw new Error(`HTTP ${response.status}`);
+    const html = await response.text();
+    document.getElementById(targetId).innerHTML = html;
+  } catch (error) {
+    console.error(`Failed to load ${filePath}:`, error);
+    document.getElementById(targetId).innerHTML = '<section class="container"><p>Section failed to load.</p></section>';
+  }
+}
+
+loadSection('about-section', 'sections/about.html');
+loadSection('news-section', 'sections/news.html');
+loadSection('team-section', 'sections/team.html');
+loadSection('publications-section', 'sections/publications.html');
+loadSection('contact-section', 'sections/contact.html');
+</script>
 
 </body>
 </html>
