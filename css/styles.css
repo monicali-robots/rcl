@@ -67,16 +67,14 @@ nav {
 .hero {
     background-image: url('../images/rainier1.jpg');
     background-size: contain;
-    background-position: center;
+    background-position: center center;
     background-repeat: no-repeat;
-    background-attachment: fixed;
     min-height: 500px;
     display: flex;
     align-items: center;
     justify-content: center;
     color: white;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-    background-clip: padding-box;
 }
 
 .hero-content {
